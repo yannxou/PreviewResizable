@@ -25,9 +25,8 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-While resizing the view, both the size of the content and the container views are displayed so it’s easy to see whether the content view fits in the new area. 
-
-Double-clicking the resize button will adapt the container view size to the content size.
+* While resizing the view, both the size of the content and the container views are displayed so it’s easy to see whether the content view fits in the new area. 
+* Double-clicking the resize button will adapt the container view size to the content size.
 
 ## License
 
