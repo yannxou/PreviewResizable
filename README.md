@@ -10,7 +10,7 @@ Switching the target device just to check a view on different sizes can be slow 
 
 The modifier wraps the content view into a container view that can be resized when running a Live preview. 
 
-> TODO: include gif
+![PreviewResizable_canvas](https://user-images.githubusercontent.com/5954961/202699901-51af1e16-b330-48b5-a559-3d6a315a696b.gif)
 
 ## Usage
 
