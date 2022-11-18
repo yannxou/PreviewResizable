@@ -28,6 +28,12 @@ struct ContentView_Previews: PreviewProvider {
 * While resizing the view, both the size of the content and the container views are displayed so it’s easy to see whether the content view fits in the new area. 
 * Double-clicking the resize button will adapt the container view size to the content size.
 
+## Installation
+
+1. From the File menu, select Add Packages...
+2. Enter package repository URL: https://github.com/yannxou/PreviewResizable
+3. Confirm the version and let Xcode resolve the package
+
 ## License
 
 This library is released under the MIT license. See [LICENSE](LICENSE) for details.
