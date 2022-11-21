@@ -10,20 +10,14 @@ import PreviewResizable
 
 struct ContentView: View {
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Image(systemName: "sunrise")
-                    .imageScale(.large)
-                    .foregroundColor(.orange)
-                Text("See how this view adapts to different sizes")
-            }
-            Spacer()
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
+        List {
+            ComponentView()
+            ComponentView()
+            ComponentView()
+            ComponentView()
+            ComponentView()
+            ComponentView()
         }
-        .padding()
-        .frame(minWidth: 200, maxWidth: .infinity)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF55CC4C292BF95800A84D48 /* ComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF55CC4B292BF95800A84D48 /* ComponentView.swift */; };
 		AFE4482A291E676500ADA761 /* PreviewResizableExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE44829291E676500ADA761 /* PreviewResizableExampleApp.swift */; };
 		AFE4482C291E676500ADA761 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE4482B291E676500ADA761 /* ContentView.swift */; };
 		AFE4482E291E676600ADA761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFE4482D291E676600ADA761 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF55CC4B292BF95800A84D48 /* ComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentView.swift; sourceTree = "<group>"; };
 		AFE44826291E676500ADA761 /* PreviewResizableExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PreviewResizableExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE44829291E676500ADA761 /* PreviewResizableExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewResizableExampleApp.swift; sourceTree = "<group>"; };
 		AFE4482B291E676500ADA761 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				AFE44829291E676500ADA761 /* PreviewResizableExampleApp.swift */,
 				AFE4482B291E676500ADA761 /* ContentView.swift */,
+				AF55CC4B292BF95800A84D48 /* ComponentView.swift */,
 				AFE4482D291E676600ADA761 /* Assets.xcassets */,
 				AFE4482F291E676600ADA761 /* Preview Content */,
 			);
@@ -162,6 +165,7 @@
 			files = (
 				AFE4482C291E676500ADA761 /* ContentView.swift in Sources */,
 				AFE4482A291E676500ADA761 /* PreviewResizableExampleApp.swift in Sources */,
+				AF55CC4C292BF95800A84D48 /* ComponentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
