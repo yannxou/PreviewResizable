@@ -64,7 +64,8 @@ struct PreviewResizableViewModifier: ViewModifier {
         }
         .simultaneousGesture(
             TapGesture(count: 2).onEnded { _ in
-                size = contentSize
+                // Size to fit:
+                size = CGSize(width: min(maxSize.width, contentSize.width), height: min(maxSize.height, contentSize.height))
             }
         )
     }
