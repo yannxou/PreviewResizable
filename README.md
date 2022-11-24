@@ -34,6 +34,18 @@ struct ContentView_Previews: PreviewProvider {
 2. Enter package repository URL: https://github.com/yannxou/PreviewResizable
 3. Confirm the version and let Xcode resolve the package
 
+## Tips
+
+To avoid having to `import PreviewResizable` in every SwiftUI View that needs to use the `.previewResizable()` extension we can globally import it in our module with the `@_exported` keyword. Additionally, we can prevent it from being imported in release builds by wrapping the call in `#if` blocks. 
+
+```swift
+#if targetEnvironment(simulator)
+@_exported import PreviewResizable
+#endif
+```
+
+For temporary usages of the `PreviewResizable` modifier (we can add the extension to do some manual checks but remove afterwards) this is not an issue. But if we want to commit the preview code including the modifier call then the `PreviewProvider` implementation will also have to be wrapped in a similar `#if` block to prevent an error when building for release.
+
 ## License
 
 This library is released under the MIT license. See [LICENSE](LICENSE) for details.
