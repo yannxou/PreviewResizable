@@ -39,7 +39,7 @@ struct ContentView_Previews: PreviewProvider {
 To avoid having to `import PreviewResizable` in every SwiftUI View that needs to use the `.previewResizable()` extension we can globally import it in our module with the `@_exported` keyword. Additionally, we can prevent it from being imported in release builds by wrapping the call in `#if` blocks. 
 
 ```swift
-#if targetEnvironment(simulator)
+#if DEBUG
 @_exported import PreviewResizable
 #endif
 ```
