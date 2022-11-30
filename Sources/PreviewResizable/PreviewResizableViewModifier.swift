@@ -48,6 +48,7 @@ struct PreviewResizableViewModifier: ViewModifier {
         ZStack(alignment: .bottomTrailing) {
             Image(systemName: "arrow.up.backward.and.arrow.down.forward")
                 .frame(width: handleSize, height: handleSize)
+                .dynamicTypeSize(.large)
                 .background(Color.gray.opacity(0.2).frame(width: handleSize, height: handleSize))
                 .gesture(DragGesture(minimumDistance: 0.0)
                     .onChanged { value in
@@ -81,6 +82,7 @@ struct PreviewResizableViewModifier: ViewModifier {
                 .background(isContentFitting ? Color(uiColor: .systemGroupedBackground) : .red)
         }
         .font(.caption)
+        .dynamicTypeSize(.large)
         .opacity(isDragging ? 1 : 0)
         .transition(.opacity)
         .animation(.interactiveSpring(), value: isDragging)
