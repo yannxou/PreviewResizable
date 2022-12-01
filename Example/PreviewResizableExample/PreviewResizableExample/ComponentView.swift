@@ -30,5 +30,6 @@ struct ComponentView_Previews: PreviewProvider {
     static var previews: some View {
         ComponentView()
             .previewResizable()
+            .previewLayout(.sizeThatFits)
     }
 }

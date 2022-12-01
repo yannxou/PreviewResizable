@@ -26,5 +26,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .previewResizable()
+            .previewLayout(.fixed(width: 375, height: 800))
     }
 }

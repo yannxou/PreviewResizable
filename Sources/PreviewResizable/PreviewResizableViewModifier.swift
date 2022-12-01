@@ -12,6 +12,7 @@ struct PreviewResizableViewModifier: ViewModifier {
     @State private var size = CGSize(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.width)
     @State private var isDragging = false
     @State private var contentSize: CGSize = .zero
+    @State private var isRunning = false
 
     private let handleSize: CGFloat = 30
     private let minSize: CGSize = .init(width: 30, height: 30)
@@ -20,22 +21,33 @@ struct PreviewResizableViewModifier: ViewModifier {
     }
 
     func body(content: Content) -> some View {
-        GeometryReader { proxy in
-            let maxSize = CGSize(width: proxy.size.width, height: proxy.size.height + proxy.safeAreaInsets.bottom)
-            ZStack(alignment: .crossAlignment) {
-                contentWrapper(content)
-                    .frame(width: min(maxSize.width, size.width), height: min(maxSize.height, size.height))
-                    .overlay(rectangleHint)
-                    .frame(width: size.width, height: size.height, alignment: .topLeading)
+        VStack(spacing: 0) {
+            if isRunning {
+                GeometryReader { proxy in
+                    let maxSize = CGSize(width: proxy.size.width, height: proxy.size.height + proxy.safeAreaInsets.bottom)
+                    ZStack(alignment: .crossAlignment) {
+                        contentWrapper(content)
+                            .frame(width: min(maxSize.width, size.width), height: min(maxSize.height, size.height))
+                            .overlay(rectangleHint)
+                            .frame(width: size.width, height: size.height, alignment: .topLeading)
 
-                sizeDisplay
-                    .alignmentGuide(.crossHorizontalAlignment, computeValue: { d in
-                        size.width < 120 ? d[HorizontalAlignment.leading] - 10 : 120 })
+                        sizeDisplay
+                            .alignmentGuide(.crossHorizontalAlignment, computeValue: { d in
+                                size.width < 120 ? d[HorizontalAlignment.leading] - 10 : 120 })
 
-                dragHandle(maxSize: maxSize)
+                        dragHandle(maxSize: maxSize)
+                    }
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+            } else {
+                content
             }
         }
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+        .task {
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+                isRunning = true
+            }
+        }
     }
 
     private var rectangleHint: some View {
