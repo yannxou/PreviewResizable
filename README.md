@@ -1,5 +1,8 @@
 # PreviewResizable
 
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fyannxou%2FPreviewResizable%2Fbadge%3Ftype%3Dswift-versions)](https://swiftpackageindex.com/yannxou/PreviewResizable)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2Fyannxou%2FPreviewResizable%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/yannxou/PreviewResizable)
+
 A view modifier that allows custom resizing and size debugging in SwiftUI previews. Useful to quickly check how views adapt to different sizes.
 
 ## Motivation
